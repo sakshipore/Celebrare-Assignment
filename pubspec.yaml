@@ -1,0 +1,49 @@
+name: celebrare_assignment
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.8.4
+  get: ^4.6.5
+  image_picker: ^0.8.6
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - asset/images/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: asset/fonts/Poppins/Poppins-Thin-100.ttf
+          weight: 100
+        - asset: asset/fonts/Poppins/Poppins-ExtraLight-200.ttf
+          weight: 200
+        - asset: asset/fonts/Poppins/Poppins-Light-300.ttf
+          weight: 300
+        - asset: asset/fonts/Poppins/Poppins-Regular-400.ttf
+          weight: 400
+        - asset: asset/fonts/Poppins/Poppins-Medium-500.ttf
+          weight: 500
+        - asset: asset/fonts/Poppins/Poppins-SemiBold-600.ttf
+          weight: 600
+        - asset: asset/fonts/Poppins/Poppins-Bold-700.ttf
+          weight: 700
+        - asset: asset/fonts/Poppins/Poppins-ExtraBold-800.ttf
+          weight: 800
+        - asset: asset/fonts/Poppins/Poppins-Black-900.ttf
+          weight: 900
