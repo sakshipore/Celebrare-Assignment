@@ -17,4 +17,6 @@ class HomeController extends GetxController {
       log("Image was not picked");
     }
   }
+
+
 }

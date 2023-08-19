@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:celebrare_assignment/constants/text_style.dart';
 import 'package:celebrare_assignment/controller/home_controller.dart';
+import 'package:celebrare_assignment/widgets/popup_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -56,6 +57,12 @@ class HomeScreen extends StatelessWidget {
                       GestureDetector(
                         onTap: () async {
                           await controller.pickingImage();
+                          if(controller.image != null) {
+                            // ignore: use_build_context_synchronously
+                            popUpDialog(
+                              context, controller.image!);
+                          }
+                          
                         },
                         child: Container(
                           height: 40.h,
@@ -72,7 +79,6 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      
                     ],
                   ),
                 ),
@@ -80,15 +86,15 @@ class HomeScreen extends StatelessWidget {
                   height: 30.h,
                 ),
                 SizedBox(
-                        height: 400.h,
-                        width: 340.w,
-                        child: controller.image==null ?
-                        SizedBox()
-                        : Image.file(
+                  height: 400.h,
+                  width: 340.w,
+                  child: controller.image == null
+                      ? SizedBox()
+                      : Image.file(
                           File(controller.image!.path),
                           fit: BoxFit.cover,
                         ),
-                      ),
+                ),
               ],
             ),
           ),
