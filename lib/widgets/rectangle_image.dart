@@ -25,7 +25,11 @@ class RectangleImage extends StatelessWidget {
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10.r),
-          child: Image.file(image, fit: BoxFit.fill,),),
+          child: Image.file(
+            image,
+            fit: BoxFit.fill,
+          ),
+        ),
       ),
     );
   }
