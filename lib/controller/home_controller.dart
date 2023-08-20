@@ -21,18 +21,19 @@ class HomeController extends GetxController {
     }
   }
 
+  void changeIndex(int currentIndex) {
+    index = currentIndex;
+    update();
+  }
+
   getShape(int index) {
-    try {
+   
       if (index == 0) {
         OriginalImage(image: image!);
       }
       if (index == 1) {
         CircleImage(image: image!);
       }
-    } catch (e) {
-      log(e.toString());
-    } finally {
-      update();
-    }
+    
   }
 }

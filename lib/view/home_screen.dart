@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:celebrare_assignment/constants/text_style.dart';
 import 'package:celebrare_assignment/controller/home_controller.dart';
+import 'package:celebrare_assignment/widgets/get_shape.dart';
 import 'package:celebrare_assignment/widgets/popup_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -89,12 +90,17 @@ class HomeScreen extends StatelessWidget {
                   height: 400.h,
                   width: 340.w,
                   child: controller.image == null
-                      ? SizedBox()
-                      : Image.file(
-                          File(controller.image!.path),
-                          fit: BoxFit.cover,
-                        ),
+                      ? SizedBox(
+                        // child: Text(
+                        //   "Index ${controller.index}",
+                        // ),
+                      )
+                      : getShape(controller.index, controller.image!),
+                        
                 ),
+                Text(
+                          "Index ${controller.index}",
+                        ),
               ],
             ),
           ),
