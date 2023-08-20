@@ -36,8 +36,8 @@ popUpDialog(BuildContext context, File image) {
                     style: MyTextStyle.titleTextStyle,
                   ),
                   SizedBox(
-                    height: 150.h,
-                    width: 360.w,
+                    // height: 150.h,
+                    // width: 360.w,
                     child: getShape(controller.index, image),
                   ),
                   Row(

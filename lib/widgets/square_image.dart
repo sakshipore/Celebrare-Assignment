@@ -9,24 +9,22 @@ class SquareImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Container(
-        height: 50.h, 
-        width: 50.w, 
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.r), 
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 10.0,
-              spreadRadius: 2.h, 
-              color: Colors.black,
-            )
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(10.r),
-          child: Image.file(image, fit: BoxFit.cover)),
+    return Container(
+      height: 150.h, 
+      width: 150.w, 
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.r), 
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 10.0,
+            spreadRadius: 2.h, 
+            color: Colors.black,
+          )
+        ],
       ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.r),
+        child: Image.file(image, fit: BoxFit.cover)),
     );
   }
 }

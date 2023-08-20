@@ -98,9 +98,7 @@ class HomeScreen extends StatelessWidget {
                       : getShape(controller.index, controller.image!),
                         
                 ),
-                Text(
-                          "Index ${controller.index}",
-                        ),
+                
               ],
             ),
           ),

@@ -11,8 +11,8 @@ class RectangleImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: Container(
-        height: 50.h,
-        width: 100.w,
+        height: 100.h,
+        width: 200.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.r),
           boxShadow: [

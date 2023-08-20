@@ -9,12 +9,9 @@ class CircleImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 25.h,
-      width: 25.w, 
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(25.r),
-        child: Image.file(image, fit: BoxFit.fill,)),
+    return CircleAvatar(
+      radius: 50.r,
+      backgroundImage: FileImage(image,),
     );
   }
 }
